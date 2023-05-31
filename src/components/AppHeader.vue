@@ -1,7 +1,48 @@
 <script>
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+    // data header link
+
+    data(){
+        return{
+            headerLinks: [
+                {
+                    linkName: 'characters',
+                    hrefLink: '#'
+                }, {
+                    linkName: 'comics',
+                    hrefLink: '#'
+                }, {
+                    linkName: 'movies',
+                    hrefLink: '#'
+                }, {
+                    linkName: 'tv',
+                    hrefLink: '#'
+                }, {
+                    linkName: 'games',
+                    hrefLink: '#'
+                }, {
+                    linkName: 'collectibles',
+                    hrefLink: '#'
+                }, {
+                    linkName: 'videos',
+                    hrefLink: '#'
+                }, {
+                    linkName: 'fans',
+                    hrefLink: '#'
+                }, {
+                    linkName: 'news',
+                    hrefLink: '#'
+                }, {
+                    linkName: 'shop',
+                    hrefLink: '#'
+                }
+                
+            ]
+        }
+    }
 }
+
 </script>
 <!----------------------------------------------------------------- -->
 
@@ -11,7 +52,11 @@ export default {
             <img src="../assets/img/dc-logo.png" alt="logo">
             <nav>
                 <ul>
-                    <li>
+                   <li  v-for="element in headerLinks">
+                        <a :href="element.hrefLink">
+                            {{ element.linkName }}
+                        </a>
+                    <!-- <li>
                         <a href="#">characters</a>
                     </li>
                     <li>
@@ -39,7 +84,7 @@ export default {
                         <a href="#">news</a>
                     </li>
                     <li>
-                        <a href="#">shop</a>
+                        <a href="#">shop</a> -->
                     </li>
                 </ul>
             </nav>
