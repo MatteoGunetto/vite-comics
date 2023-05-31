@@ -1,6 +1,38 @@
 <script>
 export default {
-    name: 'AppFooter'
+    name: 'AppFooter',
+    data() {
+        return {
+            footerLinks: [
+                {
+                    linkName: 'digital comics',
+                    urlImg: 'buy-comics-digital-comics.png',
+                    hrefLink: '#'
+                }, {
+                    linkName: 'dc merchandise',
+                    urlImg: 'buy-comics-merchandise.png',
+                    hrefLink: '#'
+                }, {
+                    linkName: 'subscription',
+                    urlImg: 'buy-comics-subscriptions.png',
+                    hrefLink: '#'
+                }, {
+                    linkName: 'comic shop locator',
+                    urlImg: 'buy-comics-shop-locator.png',
+                    hrefLink: '#'
+                }, {
+                    linkName: 'dc power visa',
+                    urlImg: 'buy-dc-power-visa.svg',
+                    hrefLink: '#'
+                }
+            ]
+        }
+    },
+    methods: {
+        getImgPath(imgPath){
+            return new URL(imgPath, import.meta.url).href;
+        }
+    }
 }
 
 </script>
@@ -10,26 +42,13 @@ export default {
             <section class="first-section">
                 <nav>
                     <ul>
-                        <li>
-                            <img src="../assets/img/buy-comics-digital-comics.png" alt="digital_comics">
-                            <a href="#">digital comics</a>
-                        </li>
-                        <li>
-                            <img src="../assets/img/buy-comics-merchandise.png" alt="dc_merchandise">
-                            <a href="#">dc merchandise</a>
-                        </li>
-                        <li>
-                            <img src="../assets/img/buy-comics-subscriptions.png" alt="subscription">
-                            <a href="#">subscription</a>
-                        </li>
-                        <li>
-                            <img src="../assets/img/buy-comics-shop-locator.png" alt="comic_shop_locator">
-                            <a href="#">comic shop locator</a>
-                        </li>
-                        <li>
-                            <img src="../assets/img/buy-dc-power-visa.svg" alt="dc_power_visa">
-                            <a href="#">dc power visa</a>
-                        </li>
+                        <li v-for="element in footerLinks">
+                            
+                            <img :src="getImgPath(`../assets/img/${element.urlImg}`)" :alt="element.linkName">
+                            <a :href="element.hrefLink">
+                            {{ element.linkName }}</a>
+                        </li>    
+                        
                     </ul>
                 </nav>
             </section>

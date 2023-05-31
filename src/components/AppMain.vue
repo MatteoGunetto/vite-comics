@@ -15,7 +15,7 @@ export default {
 
 <style lang="scss" scoped>
 main{
-        height: 15vh;
+        height: 150px;
         background-color: #1c1c1c;
         padding: 30px;
         div.container{
