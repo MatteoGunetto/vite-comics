@@ -94,11 +94,10 @@ export default {
 
 <style lang="scss" scoped>
 header{
-        height: 70px;
         padding: 10px;
         margin-bottom: 6px;
         div{
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;

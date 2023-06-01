@@ -4,26 +4,30 @@ export default {
 }
 </script>
 <template>
-    <main>
+     <main>
+        <section class="jumbotron">
+        </section>
         <div class="container">
-            <h2>
-            -- Content goes here --
-            </h2>
+            <section></section>
         </div>
     </main>
 </template>
 
 <style lang="scss" scoped>
-main{
-        height: 150px;
+    main{
+        height: 850px;
         background-color: #1c1c1c;
-        padding: 30px;
+        section{
+            height: 55%;
+            background-image: url("../assets/img/jumbotron.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
         div.container{
             max-width: 1000px;
             margin: 0 auto;
             h2{
                 color: white;
-                text-align: center;
             }
         }
     }

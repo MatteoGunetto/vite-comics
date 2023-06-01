@@ -53,23 +53,24 @@ export default {
                 </nav>
             </section>
             <section class="second-section">
-                <div>
-                    <ul>
-                        <li>
-                            <h3>dc comics</h3>
-                        </li>
-                        <li>
-                            <a href="#">Characters</a>
-                        </li>
-                        <li>
-                            <a href="#">Comics</a>
-                        </li>
-                        <li>
-                            <a href="#">Movies</a>
-                        </li>
-                        <li>
-                            <a href="#">TV</a>
-                        </li>
+                <div class="container">
+                    <div>
+                        <ul>
+                            <li>
+                                <h3>dc comics</h3>
+                            </li>
+                            <li>
+                                <a href="#">Characters</a>
+                            </li>
+                            <li>
+                                <a href="#">Comics</a>
+                            </li>
+                            <li>
+                                <a href="#">Movies</a>
+                            </li>
+                            <li>
+                                <a href="#">TV</a>
+                            </li>
                         <li>
                             <a href="#">Games</a>
                         </li>
@@ -156,6 +157,7 @@ export default {
                     </ul>
                 </div>
                 <img src="../assets/img/dc-logo-bg.png" alt="">
+            </div>
             </section>
             <section class="third-section">
                 <div>
@@ -181,9 +183,6 @@ export default {
 <style lang="scss" scoped>
 footer{
     height: 850px;
-    background-image: url('../assets/img/footer-bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
     
     div.container{
         height: 100%;
@@ -225,13 +224,20 @@ footer{
                 }
             }
         }
-        section.second-section{
+
+        .container{
             height: 530px;
-            max-width: 1000px;
+            max-width: 2000px;
             margin: 0 auto;
             display: flex;
             padding: 40px 0;
             overflow: hidden;
+        }
+        section.second-section{
+            background-image: url('../assets/img/footer-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
                 div{
                     margin-right: 25px;
                     ul{
@@ -260,6 +266,7 @@ footer{
                 img{
                     height: 650px;
                     align-self: center;
+                    padding-right: 400px;
                 }
         }
         section.third-section{
