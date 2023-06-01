@@ -53,8 +53,9 @@ export default {
                 </nav>
             </section>
             <section class="second-section">
-                <div class="container">
-                    <div>
+                <div class="second-container">
+                    <div class="menu">
+                        <div>
                         <ul>
                             <li>
                                 <h3>dc comics</h3>
@@ -156,8 +157,14 @@ export default {
                         
                     </ul>
                 </div>
-                <img src="../assets/img/dc-logo-bg.png" alt="">
-            </div>
+                    </div>
+                    <div class="img-logo">
+                        <img src="../assets/img/dc-logo-bg.png" alt="">
+                    </div>
+                </div>
+            
+                
+                   
             </section>
             <section class="third-section">
                 <div>
@@ -196,7 +203,7 @@ footer{
             position: relative;
             nav{
                 height: 100%;
-                max-width: 1000px;
+                width: 1200px;
                 margin: 0 auto;
                 ul{
                     display: flex;
@@ -225,18 +232,34 @@ footer{
             }
         }
 
-        .container{
+        // .container{
+        //     height: 530px;
+        //     max-width: 2000px;
+        //     margin: 0 auto;
+        //     display: flex;
+        //     padding: 40px 0;
+        //     overflow: hidden;
+        //     gap: 300px;
+        // }
+        .menu{
+            display: flex;
+            gap: 20px;
+            padding-left: 330px;
+        }
+        .second-container{
             height: 530px;
             max-width: 2000px;
             margin: 0 auto;
             display: flex;
             padding: 40px 0;
             overflow: hidden;
+            gap: 100px;
         }
         section.second-section{
             background-image: url('../assets/img/footer-bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
+            display: flex;
 
                 div{
                     margin-right: 25px;
@@ -263,17 +286,17 @@ footer{
                 div:last-of-type{
                     flex-grow: 1;
                 }
+
                 img{
-                    height: 650px;
-                    align-self: center;
-                    padding-right: 400px;
+                    width: 650px;
+
                 }
         }
         section.third-section{
             height: 150px;
             background-color: #303030;
             div{
-                max-width: 1000px;
+                max-width: 1200px;
                 height: 100%;
                 margin: 0 auto;
                 display: flex;

@@ -109,29 +109,51 @@ export default {
         background-color: #1c1c1c;
         // padding: 30px 0;
         section.jumbotron{
-            height: 40vh;
+            height: 400px;
             background-image: url('../assets/img/jumbotron.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             margin-bottom: 30px;
-        }
-        div.container{
-            max-width: 1200px;
-            margin: 0 auto;
-            section{
-                display: flex;
-                flex-wrap: wrap;
-                div.card{
-                    width: calc(100% / 6);
-                    img{
-                        height: 50%;
-                    }
-                    h4{
-                        text-transform: uppercase;
-                        color: white;
-                    }
-                }
+            position: relative;
+            button{
+                background-color: #0282f9;
+                text-transform: uppercase;
+                color: white;
+                font-weight: 600;
+                padding: 10px 15px;
+                font-size: 1.2rem;
+                border: none;
+                position: absolute;
+                bottom: -5%;
+                left: 19%;
+                cursor: pointer;
             }
         }
+        div.container{
+
+                max-width: 1200px;
+                margin: 0 auto;
+                section{
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                div{
+                    text-align: center;
+                    button{
+                        background-color: #0282f9;
+                        text-transform: uppercase;
+                        color: white;
+                        font-weight: 600;
+                        padding: 10px 45px;
+                        margin-bottom: 10px;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+
+        }
+
     }
+
 </style>
